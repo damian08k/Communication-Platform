@@ -1,4 +1,4 @@
-const defaultStylesValues = {
+export const defaultStylesValues = {
   fontSize: 1.8,
   margin: 10,
   padding: 10,
@@ -24,3 +24,5 @@ const defaultStylesValues = {
     h3: 2,
   },
 };
+
+export const PLATFORM_TITLE = 'Platforma komunikacyjna Wydziału Zarządzania';
