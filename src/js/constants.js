@@ -15,11 +15,11 @@ export const defaultStylesValues = {
 
   colors: {
     black: '#363333',
-    white: '#ebe7e7',
+    white: '#fff',
   },
 
   headings: {
-    h1: 3,
+    h1: 2.5,
     h2: 2.2,
     h3: 2,
   },
