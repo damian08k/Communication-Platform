@@ -87,3 +87,16 @@ export const IconsContainer = styled.div`
     flex-basis: 40%;
   }
 `;
+
+export const MainContentContainer = styled.main`
+  width: 80%;
+  margin: 0 auto;
+`;
+
+export const ContentContainer = styled.div`
+  margin: ${margin}px;
+  padding: ${padding}px;
+  box-shadow: 5px 5px 4px 0 gray;
+  border-radius: 20px;
+  background-color: white;
+`;
