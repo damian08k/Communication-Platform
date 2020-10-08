@@ -17,13 +17,13 @@ export const MainContainer = styled.div`
 `;
 
 export const HeaderContainer = styled.header`
+  position: sticky;
+  top: 0;
   background-color: ${white};
   border-bottom: 3px solid ${black};
 `;
 
 export const HeaderElementsContainer = styled.div`
-  position: sticky;
-  top: 0;
   display: flex;
   align-items: center;
   color: ${black};
