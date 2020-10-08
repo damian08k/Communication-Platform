@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Page from './pages/Page';
 
@@ -14,6 +15,7 @@ const App = () => {
       <MainContainer>
         <Header />
         <Page />
+        <Footer />
       </MainContainer>
     </Router>
   );

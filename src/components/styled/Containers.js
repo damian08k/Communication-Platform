@@ -4,13 +4,16 @@ import { defaultStylesValues } from '../../js/constants';
 
 const {
   margin,
-  breakpoints: { mobileLarge },
+  padding,
+  breakpoints: { mobileXMedium, mobileLarge },
   colors: { black, white },
-  headings: { h1 },
+  headings: { h1, h2 },
 } = defaultStylesValues;
 
 export const MainContainer = styled.div`
+  position: relative;
   width: 100%;
+  min-height: 100vh;
 `;
 
 export const HeaderContainer = styled.header`
@@ -53,5 +56,34 @@ export const MenuContainer = styled.nav`
     height: 100%;
     width: 40%;
     margin-left: auto;
+  }
+`;
+
+export const FooterContainer = styled.footer`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: ${padding}px 0;
+  background-color: ${white};
+  border-top: 3px solid ${black};
+
+  .footer-ask {
+    flex-basis: 100%;
+    font-size: ${h2}rem;
+  }
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin: ${margin * 2}px auto ${margin + 5}px;
+  flex-basis: 100%;
+
+  @media ${mobileXMedium} {
+    flex-basis: 40%;
   }
 `;
