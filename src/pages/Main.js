@@ -1,12 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
+import News from '../components/pages_components/main_page/News';
 import Welcome from '../components/pages_components/main_page/Welcome';
+
+import { FlexContainer } from '../components/styled/Containers';
 
 const Main = () => {
   return (
-    <Fragment>
+    <FlexContainer>
       <Welcome />
-    </Fragment>
+      <News />
+    </FlexContainer>
   );
 };
 

@@ -7,7 +7,7 @@ const {
   margin,
   padding,
   breakpoints: { mobileXMedium, mobileLarge },
-  headings: { h2 },
+  headings: { h2, h3 },
 } = defaultStylesValues;
 
 export const SectionTitle = styled.h2`
@@ -61,6 +61,45 @@ export const WelcomeSection = styled.section`
 
     .welcome-txt-container {
       flex-basis: 70%;
+    }
+  }
+`;
+
+export const NewsSection = styled.section`
+  .news-section-article {
+    flex-wrap: wrap;
+    margin: ${margin * 2}px 0;
+  }
+
+  .news-section-news-title {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: ${h3}rem;
+  }
+
+  .news-section-images {
+    width: 100%;
+    max-width: 300px;
+    margin: ${margin}px 0;
+  }
+
+  .news-section-short-desc {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: ${fontSize}rem;
+
+    .news-section-anchor {
+      padding-left: ${padding / 3}px;
+    }
+  }
+
+  @media ${mobileXMedium} {
+    .news-section-news-title {
+      text-align: left;
+    }
+
+    .news-section-short-desc {
+      text-align: left;
     }
   }
 `;

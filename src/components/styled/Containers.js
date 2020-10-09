@@ -93,9 +93,15 @@ export const MainContentContainer = styled.main`
 `;
 
 export const ContentContainer = styled.div`
+  // width: 100%;
   margin: ${margin}px ${margin}px ${margin * 2}px;
   padding: ${padding}px;
   box-shadow: 5px 5px 4px 0 gray;
   border-radius: 20px;
   background-color: white;
+`;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
