@@ -11,7 +11,8 @@ const {
 } = defaultStylesValues;
 
 export const MainContainer = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100vh;
 `;
@@ -60,10 +61,7 @@ export const MenuContainer = styled.nav`
 `;
 
 export const FooterContainer = styled.footer`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
   display: flex;
   text-align: center;
   flex-wrap: wrap;
@@ -89,12 +87,13 @@ export const IconsContainer = styled.div`
 `;
 
 export const MainContentContainer = styled.main`
+  flex-grow: 1;
   width: 80%;
   margin: 0 auto;
 `;
 
 export const ContentContainer = styled.div`
-  margin: ${margin}px;
+  margin: ${margin}px ${margin}px ${margin * 2}px;
   padding: ${padding}px;
   box-shadow: 5px 5px 4px 0 gray;
   border-radius: 20px;
