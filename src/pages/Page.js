@@ -1,12 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Help from './Help';
 import Main from './Main';
 
 const Page = () => {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
+      <Route path="/pomoc" component={Help} />
     </Switch>
   );
 };

@@ -7,6 +7,7 @@ const {
   margin,
   padding,
   breakpoints: { mobileXMedium, mobileLarge },
+  colors: { black },
   headings: { h2, h3 },
 } = defaultStylesValues;
 
@@ -111,4 +112,60 @@ export const NewsSection = styled.section`
 export const SingupSection = styled.section`
   text-align: center;
   align-self: center;
+`;
+
+export const HelpSection = styled.section`
+  .mobile-help-list {
+    list-style-type: none;
+
+    .mobile-help-list-element {
+      border-bottom: 2px solid ${black};
+
+      &:first-child {
+        border-top: 2px solid ${black};
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .mobile-help-list-category {
+        padding-top: ${padding}px;
+        font-size: ${h3}rem;
+        text-align: center;
+      }
+
+      .mobile-help-list-answer {
+        padding: ${padding}px 0;
+        font-size: ${fontSize}rem;
+      }
+    }
+  }
+
+  .desktop-help-table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    border: 1px solid ${black};
+    border-collapse: collapse;
+
+    .help-heading,
+    .help-row,
+    .help-cell {
+      border: 1px solid ${black};
+    }
+
+    .help-heading {
+      background-color: #e0e7f1;
+    }
+
+    .help-heading,
+    .help-cell {
+      padding: ${padding}px;
+      font-size: ${fontSize}rem;
+    }
+
+    .help-cell:first-child {
+      text-align: center;
+    }
+  }
 `;
