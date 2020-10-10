@@ -66,6 +66,10 @@ export const WelcomeSection = styled.section`
 `;
 
 export const NewsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
   .news-section-article {
     flex-wrap: wrap;
     margin: ${margin * 2}px 0;
