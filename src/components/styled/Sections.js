@@ -103,3 +103,8 @@ export const NewsSection = styled.section`
     }
   }
 `;
+
+export const SingupSection = styled.section`
+  text-align: center;
+  align-self: center;
+`;

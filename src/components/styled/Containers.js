@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { defaultStylesValues } from '../../js/constants';
 
@@ -93,15 +93,29 @@ export const MainContentContainer = styled.main`
 `;
 
 export const ContentContainer = styled.div`
-  // width: 100%;
   margin: ${margin}px ${margin}px ${margin * 2}px;
   padding: ${padding}px;
+  height: fit-content;
   box-shadow: 5px 5px 4px 0 gray;
   border-radius: 20px;
   background-color: white;
+
+  ${props =>
+    props.signup &&
+    css`
+      flex-grow: 0;
+      @media ${mobileXMedium} {
+        flex-basis: 40%;
+      }
+
+      @media ${mobileLarge} {
+        flex-basis: 50%;
+      }
+    `}
 `;
 
 export const FlexContainer = styled.div`
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 `;
