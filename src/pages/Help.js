@@ -32,20 +32,21 @@ const helpInfo = [
   },
 ];
 
+const changeWidth = 800;
+
 const Help = () => {
   const { windowWidth } = useContext(AppContext);
 
   const showMobileHelpList = <MobileList info={helpInfo} />;
   const showDesktopHelpTable = <DesktopTable headings={HELP_TABLE_HEADINGS} info={helpInfo} />;
 
-  const show = windowWidth > 800 ? showDesktopHelpTable : showMobileHelpList;
+  const tableOrList = windowWidth > changeWidth ? showDesktopHelpTable : showMobileHelpList;
 
-  const tableOrList = showDesktopHelpTable;
   return (
     <ContentContainer>
       <HelpSection>
         <SectionTitle>Pomoc dotycząca użytkowania platformy</SectionTitle>
-        {show}
+        {tableOrList}
       </HelpSection>
     </ContentContainer>
   );
