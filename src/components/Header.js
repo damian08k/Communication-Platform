@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Menu from './Menu';
 
+import { AppContext } from '../AppProvider';
 import { HeaderContainer, HeaderElementsContainer, MenuContainer, NameContainer } from './styled/Containers';
 import { Hamburger } from './styled/MenuElements';
 
@@ -9,22 +10,11 @@ import { PLATFORM_TITLE } from '../js/constants';
 
 import logoImg from '../assets/images/WZ-logo.png';
 
-const FIRST_WINDOW_WIDTH = window.innerWidth;
 const CHANGE_ELEMENTS_WIDTH = 1024;
 
 const Header = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(FIRST_WINDOW_WIDTH);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => window.removeEventListener('resize', handleWindowResize);
-  }, [windowWidth]);
+  const { windowWidth } = useContext(AppContext);
 
   const handleShowMenu = () => setIsClicked(prevValue => !prevValue);
 
