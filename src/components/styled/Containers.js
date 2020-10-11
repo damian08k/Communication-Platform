@@ -112,10 +112,35 @@ export const ContentContainer = styled.div`
         flex-basis: 50%;
       }
     `}
+
+  ${props =>
+    props.faculty &&
+    css`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      flex-grow: 1;
+
+      .faculty-option-name {
+        font-size: 3rem;
+        text-align: center;
+        color: ${black};
+      }
+    `}
 `;
 
 export const FlexContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  .faculty-menu-options {
+    width: 300px;
+    text-decoration: none;
+
+    @media ${mobileXMedium} {
+      width: 30%;
+    }
+  }
 `;
