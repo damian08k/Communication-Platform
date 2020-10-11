@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import FooterIcon from './FooterIcon';
 
@@ -46,9 +46,8 @@ const icons = [
 ];
 
 const Footer = () => {
-  const [footerSize, setFooterSize] = useState(0);
-
   const Icon = icons.map(ico => <FooterIcon key={ico.id} href={ico.href} name={ico.name} src={ico.src} />);
+
   return (
     <FooterContainer>
       <h2 className="footer-ask">Nie znalazłeś tutaj tego, czego szukałeś? Szkorzystaj z innych aplikacji Wydziału:</h2>
