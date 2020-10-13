@@ -6,7 +6,7 @@ const {
   fontSize,
   margin,
   padding,
-  breakpoints: { mobileXMedium, mobileLarge },
+  breakpoints: { mobileSmall, mobileXMedium, mobileLarge },
   colors: { black },
   headings: { h2, h3 },
 } = defaultStylesValues;
@@ -197,14 +197,14 @@ export const AuthoritiesSection = styled.section`
   }
 
   .authority-role {
-    font-size: ${h2}rem;
+    font-size: ${h3}rem;
   }
 
   .authority-info {
     font-size: 1.5rem;
   }
 
-  @media ${mobileXMedium} {
+  @media ${mobileSmall} {
     flex-direction: row;
     justify-content: flex-start;
 

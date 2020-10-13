@@ -69,7 +69,7 @@ const Authorities = () => {
           <p className="authority-img-temporary-text">Tymczasowy tekst w miejscu zdjęcia</p>
         </div>
         <div>
-          <h2 className="authority-role">{authority.role}</h2>
+          <h3 className="authority-role">{authority.role}</h3>
           <p className="authority-info">{`${authority.title} ${authority.name} ${authority.surname}`}</p>
           <p className="authority-info">Telefon: {authority.phone}</p>
           <p className="authority-info">E-mail: {authority.email}</p>

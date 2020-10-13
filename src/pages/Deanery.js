@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { ContentContainer } from '../components/styled/Containers';
-import { DeanerySection } from '../components/styled/Sections';
+import { DeanerySection, SectionTitle } from '../components/styled/Sections';
 
 const days = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'];
 
@@ -91,7 +91,12 @@ const Deanery = () => {
     );
   });
 
-  return <Fragment>{officesInfo}</Fragment>;
+  return (
+    <Fragment>
+      <SectionTitle>Informacje dotyczące pracy dziekanatów</SectionTitle>
+      {officesInfo}
+    </Fragment>
+  );
 };
 
 export default Deanery;
