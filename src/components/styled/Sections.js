@@ -215,3 +215,37 @@ export const AuthoritiesSection = styled.section`
     }
   }
 `;
+
+export const DeanerySection = styled.section`
+  min-height: 600px;
+
+  .one-office-info-container {
+    margin: ${margin}px 0;
+
+    .office-name {
+      font-size: ${h3}rem;
+    }
+
+    .office-info {
+      font-size: 1.5rem;
+      font-weight: bold;
+      white-space: pre-line;
+
+      .office-info-value {
+        padding-left: ${padding / 2}px;
+        font-weight: normal;
+
+        .office-days {
+          display: block;
+          padding: ${padding / 2}px 0;
+        }
+      }
+
+      .office-special-info {
+        display: block;
+        margin-top: ${margin}px;
+        max-width: 450px;
+      }
+    }
+  }
+`;
