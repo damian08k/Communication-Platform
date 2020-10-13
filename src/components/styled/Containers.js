@@ -87,8 +87,11 @@ export const IconsContainer = styled.div`
 `;
 
 export const MainContentContainer = styled.main`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-grow: 1;
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
 `;
 
@@ -127,6 +130,12 @@ export const ContentContainer = styled.div`
         text-align: center;
         color: ${black};
       }
+    `}
+
+    ${props =>
+    props.authorities &&
+    css`
+      width: 480px;
     `}
 `;
 

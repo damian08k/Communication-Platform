@@ -169,3 +169,49 @@ export const HelpSection = styled.section`
     }
   }
 `;
+
+export const AuthoritiesSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .authority-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #c9c7c7;
+
+    .authority-img-temporary-text {
+      font-size: ${fontSize}rem;
+      text-align: center;
+    }
+  }
+
+  .authority-role,
+  .authority-info {
+    padding: ${padding / 4}px 0;
+    text-align: center;
+  }
+
+  .authority-role {
+    font-size: ${h2}rem;
+  }
+
+  .authority-info {
+    font-size: 1.5rem;
+  }
+
+  @media ${mobileXMedium} {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .authority-role,
+    .authority-info {
+      padding-left: ${padding}px;
+      text-align: left;
+    }
+  }
+`;
