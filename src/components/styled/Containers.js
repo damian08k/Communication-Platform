@@ -3,11 +3,12 @@ import styled, { css } from 'styled-components';
 import { defaultStylesValues } from '../../js/constants';
 
 const {
+  fontSize,
   margin,
   padding,
   breakpoints: { mobileXMedium, mobileLarge },
   colors: { black, white },
-  headings: { h1, h2 },
+  headings: { h1, h2, h3 },
 } = defaultStylesValues;
 
 export const MainContainer = styled.div`
@@ -136,6 +137,34 @@ export const ContentContainer = styled.div`
     props.authorities &&
     css`
       width: 480px;
+    `}
+
+    ${props =>
+    props.courses &&
+    css`
+      .courses-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 300px;
+
+        .courses-info-heading {
+          font-size: ${h3}rem;
+        }
+
+        .courses-info-text {
+          text-align: left;
+        }
+
+        .courses-info-webpage {
+          padding: ${padding}px 0;
+          font-size: ${fontSize}rem;
+        }
+
+        @media ${mobileXMedium} {
+          width: 400px;
+        }
+      }
     `}
 `;
 

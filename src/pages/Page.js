@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Authorities from './Authorities';
+import Courses from './Courses';
 import Deanery from './Deanery';
 import Faculty from './Faculty';
 import Help from './Help';
@@ -18,6 +19,7 @@ const Page = () => {
       <Route path="/dziekanat" component={Deanery} />
       <Route path="/plany-zajec" component={Plans} />
       <Route path="/praktyki-i-staze" component={Practices} />
+      <Route path="/kursy" component={Courses} />
       <Route path="/pomoc" component={Help} />
     </Switch>
   );
