@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { defaultStylesValues } from '../../js/constants';
 
@@ -22,6 +22,12 @@ export const InfoText = styled.p`
   padding: ${padding}px 0;
   font-size: ${fontSize}rem;
   text-align: center;
+
+  ${props =>
+    props.practices &&
+    css`
+      font-weight: bold;
+    `}
 `;
 
 export const WelcomeSection = styled.section`
@@ -280,6 +286,34 @@ export const PlansSection = styled.section`
     &:hover {
       background-color: ${black};
       color: ${white};
+    }
+  }
+`;
+
+export const PracticesSection = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .practices-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+
+    .practices-box-heading {
+      padding: ${padding}px 0;
+      font-size: ${h3}rem;
+      text-align: center;
+    }
+
+    .document-file,
+    .practices-offer {
+      padding: ${padding / 1.2}px 0;
+      font-size: ${fontSize}rem;
+    }
+
+    @media ${mobileXMedium} {
+      width: 500px;
     }
   }
 `;

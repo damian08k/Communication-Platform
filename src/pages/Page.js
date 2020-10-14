@@ -7,6 +7,7 @@ import Faculty from './Faculty';
 import Help from './Help';
 import Main from './Main';
 import Plans from './Plans';
+import Practices from './Practices';
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       <Route path="/wladze" component={Authorities} />
       <Route path="/dziekanat" component={Deanery} />
       <Route path="/plany-zajec" component={Plans} />
+      <Route path="/praktyki-i-staze" component={Practices} />
       <Route path="/pomoc" component={Help} />
     </Switch>
   );
