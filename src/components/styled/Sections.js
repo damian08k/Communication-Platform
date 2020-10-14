@@ -7,7 +7,7 @@ const {
   margin,
   padding,
   breakpoints: { mobileSmall, mobileXMedium, mobileLarge },
-  colors: { black },
+  colors: { black, white },
   headings: { h2, h3 },
 } = defaultStylesValues;
 
@@ -246,6 +246,40 @@ export const DeanerySection = styled.section`
         margin-top: ${margin}px;
         max-width: 450px;
       }
+    }
+  }
+`;
+
+export const PlansSection = styled.section`
+  text-align: center;
+
+  .plan {
+    padding: ${padding}px 0;
+  }
+
+  .major-name {
+    padding-bottom: ${padding / 2}px;
+    font-size: ${h3}rem;
+  }
+
+  .studies-type-button {
+    display: block;
+    margin: ${margin}px 0;
+    padding: ${padding}px ${padding * 2}px;
+    border: 2px solid ${black};
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: ${black};
+
+    transition: 0.3s background-color linear, 0.3s color linear;
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${black};
+      color: ${white};
     }
   }
 `;

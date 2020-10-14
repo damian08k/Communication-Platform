@@ -6,6 +6,7 @@ import Deanery from './Deanery';
 import Faculty from './Faculty';
 import Help from './Help';
 import Main from './Main';
+import Plans from './Plans';
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <Route path="/wydzial" component={Faculty} />
       <Route path="/wladze" component={Authorities} />
       <Route path="/dziekanat" component={Deanery} />
+      <Route path="/plany-zajec" component={Plans} />
       <Route path="/pomoc" component={Help} />
     </Switch>
   );
