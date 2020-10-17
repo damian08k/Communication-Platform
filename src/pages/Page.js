@@ -20,6 +20,7 @@ const Page = () => {
       <Route path="/plany-zajec" component={Plans} />
       <Route path="/praktyki-i-staze" component={Practices} />
       <Route path="/kursy" component={Courses} />
+      <Route path="/faq" component={Help} />
       <Route path="/pomoc" component={Help} />
     </Switch>
   );
