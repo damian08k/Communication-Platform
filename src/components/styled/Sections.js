@@ -317,3 +317,116 @@ export const PracticesSection = styled.section`
     }
   }
 `;
+
+export const LoginSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .img-container {
+    height: 80px;
+
+    .logo-img {
+      height: 100%;
+    }
+  }
+
+  .login-form {
+    margin: ${margin * 2}px 0;
+    .login-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .login-input {
+        margin: ${margin}px 0;
+        padding: ${padding / 2}px ${padding}px;
+        width: 100%;
+        border-radius: 20px;
+        order: 2;
+
+        &::placeholder {
+          font-family: 'Lato';
+        }
+      }
+
+      .login-label {
+        width: 100%;
+        font-size: ${fontSize}rem;
+        text-align: center;
+        order: 1;
+      }
+
+      .checbox-input {
+        margin-right: ${margin}px;
+      }
+
+      .checkbox-label {
+        font-size: 1.5rem;
+      }
+
+      .login-button {
+        margin: ${margin}px auto;
+      }
+
+      .checkbox-label,
+      .login-button {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .login-info-text {
+    .question-sign {
+      display: inline-block;
+      margin-right: ${margin / 2}px;
+      width: 25px;
+      height: 25px;
+      line-height: 20px;
+      border: 2px solid black;
+      border-radius: 50%;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  @media ${mobileXMedium} {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .img-container {
+      margin-left: ${margin * 5}px;
+      flex-basis: 40%;
+      order: 2;
+
+      .logo-img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .login-form {
+      flex-basis: 50%;
+      order: 1;
+
+      .login-container {
+        justify-content: center;
+        flex-wrap: no-wrap;
+
+        .login-input {
+          width: 80%;
+        }
+
+        .login-label {
+          width: 20%;
+        }
+      }
+    }
+
+    .login-info-text {
+      flex-basis: 100%;
+      order: 3;
+    }
+  }
+`;

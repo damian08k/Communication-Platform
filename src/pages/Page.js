@@ -6,6 +6,7 @@ import Courses from './Courses';
 import Deanery from './Deanery';
 import Faculty from './Faculty';
 import Help from './Help';
+import Login from './Login';
 import Main from './Main';
 import Plans from './Plans';
 import Practices from './Practices';
@@ -14,6 +15,7 @@ const Page = () => {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
+      <Route path="/zaloguj" component={Login} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/wladze" component={Authorities} />
       <Route path="/dziekanat" component={Deanery} />
