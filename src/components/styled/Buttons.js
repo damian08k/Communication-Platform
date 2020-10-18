@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { defaultStylesValues } from '../../js/constants';
 
 const {
-  fontSize,
   margin,
   padding,
   colors: { black, white },

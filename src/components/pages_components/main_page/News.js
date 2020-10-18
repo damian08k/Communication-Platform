@@ -15,7 +15,7 @@ const News = () => {
           <img src={newsImg} alt="obraz aktualności" className="news-section-images" />
           <p className="news-section-short-desc">
             Krótki opis...
-            <a href="#" className="news-section-anchor">
+            <a href="!#" className="news-section-anchor">
               czytaj dalej
             </a>
           </p>
@@ -25,7 +25,7 @@ const News = () => {
           <img src={newsImg} alt="obraz aktualności" className="news-section-images" />
           <p className="news-section-short-desc">
             Krótki opis...
-            <a href="#" className="news-section-anchor">
+            <a href="!#" className="news-section-anchor">
               czytaj dalej
             </a>
           </p>
