@@ -8,7 +8,7 @@ import { InfoText, LoginSection, SectionTitle } from '../components/styled/Secti
 import logo from '../assets/images/WZ-logo.png';
 
 const Login = () => {
-  const handleLoginButton = e => {
+  const handleFormSubmit = e => {
     e.preventDefault();
   };
 
@@ -20,7 +20,7 @@ const Login = () => {
           <div className="img-container">
             <img src={logo} alt="Logo Wydziału Zarządzania" className="logo-img" />
           </div>
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleFormSubmit}>
             <div className="login-container">
               <input type="text" placeholder="Wprowadź numer indeksu lub login..." id="login" className="login-input" />
               <label htmlFor="login" className="login-label">
@@ -40,7 +40,7 @@ const Login = () => {
               </label>
             </div>
             <div className="login-container">
-              <ActionButton type="submit" className="login-button" onClick={handleLoginButton}>
+              <ActionButton type="submit" className="login-button">
                 Zaloguj
               </ActionButton>
             </div>
