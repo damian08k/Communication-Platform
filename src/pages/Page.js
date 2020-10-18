@@ -10,12 +10,14 @@ import Login from './Login';
 import Main from './Main';
 import Plans from './Plans';
 import Practices from './Practices';
+import Register from './Register';
 
 const Page = () => {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
       <Route path="/zaloguj" component={Login} />
+      <Route path="/zarejestruj" component={Register} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/wladze" component={Authorities} />
       <Route path="/dziekanat" component={Deanery} />

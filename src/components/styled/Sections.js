@@ -118,6 +118,28 @@ export const NewsSection = styled.section`
 export const SingupSection = styled.section`
   text-align: center;
   align-self: center;
+
+  .sing-up-button {
+    display: block;
+    width: 150px;
+    margin: ${margin}px auto;
+    padding: ${padding}px ${padding * 2}px;
+    border: 2px solid ${black};
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: ${black};
+
+    transition: 0.3s background-color linear, 0.3s color linear;
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${black};
+      color: ${white};
+    }
+  }
 `;
 
 export const HelpSection = styled.section`
@@ -427,6 +449,58 @@ export const LoginSection = styled.section`
     .login-info-text {
       flex-basis: 100%;
       order: 3;
+    }
+  }
+`;
+
+export const RegisterSection = styled.section`
+  max-width: 600px;
+
+  .register-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .register-input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .register-input {
+        padding: ${padding / 2}px ${padding}px;
+        width: 100%;
+        order: 2;
+
+        &::placeholder {
+          font-family: 'Lato';
+        }
+      }
+
+      .register-label {
+        margin: ${margin}px 0;
+        flex-basis: 100%;
+        font-size: ${fontSize}rem;
+      }
+
+      @media ${mobileXMedium} {
+        flex-direction: row;
+        justify-content: center;
+
+        .register-input {
+          max-width: 400px;
+        }
+
+        .register-label {
+          flex-basis: 30%;
+          padding-right: ${padding}px;
+          text-align: right;
+        }
+      }
+    }
+
+    .register-button {
+      margin-top: ${margin + 5}px;
     }
   }
 `;
