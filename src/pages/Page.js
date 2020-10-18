@@ -5,6 +5,7 @@ import Authorities from './Authorities';
 import Courses from './Courses';
 import Deanery from './Deanery';
 import Faculty from './Faculty';
+import FacultyNews from './FacultyNews';
 import Help from './Help';
 import Login from './Login';
 import Main from './Main';
@@ -19,6 +20,7 @@ const Page = () => {
       <Route path="/zaloguj" component={Login} />
       <Route path="/zarejestruj" component={Register} />
       <Route path="/wydzial" component={Faculty} />
+      <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />
       <Route path="/dziekanat" component={Deanery} />
       <Route path="/plany-zajec" component={Plans} />

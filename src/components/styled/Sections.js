@@ -113,6 +113,29 @@ export const NewsSection = styled.section`
       text-align: left;
     }
   }
+
+  ${props =>
+    props.faculty &&
+    css`
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .page-list {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        list-style-type: none;
+
+        .page-number {
+          margin: ${margin}px;
+          font-size: ${fontSize}rem;
+          color: rgb(0, 0, 238);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    `}
 `;
 
 export const SingupSection = styled.section`
