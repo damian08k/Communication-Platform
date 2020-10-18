@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
-import { ActionButton } from '../../styled/Buttons';
 import { ContentContainer } from '../../styled/Containers';
 import { InfoText, SectionTitle, SingupSection } from '../../styled/Sections';
 
@@ -14,7 +13,9 @@ const Signup = () => {
           Jeśli posiadasz już konto, kliknij <Link to="/zaloguj">tutaj</Link> aby się zalogować.
         </InfoText>
         <InfoText>Jeżeli nie posiadasz jeszcze konta, kliknij w poniższy przycisk, by przejść do formularza rejestracji.</InfoText>
-        <ActionButton type="button">Zarejestruj się</ActionButton>
+        <NavLink to="/zarejestruj" className="sing-up-button">
+          Zarejestruj się
+        </NavLink>
       </SingupSection>
     </ContentContainer>
   );
