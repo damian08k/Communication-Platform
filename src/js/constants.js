@@ -26,3 +26,13 @@ export const defaultStylesValues = {
 };
 
 export const PLATFORM_TITLE = 'Platforma komunikacyjna Wydziału Zarządzania';
+
+export const studentType = 'user';
+export const lecturerType = 'lecturer';
+export const admWorkerType = 'adm';
+
+export const users = [
+  { login: 'student', password: 'student1', type: studentType },
+  { login: 'wyklad', password: 'wyklad1', type: lecturerType },
+  { login: 'pracadm', password: 'pracadm1', type: admWorkerType },
+];

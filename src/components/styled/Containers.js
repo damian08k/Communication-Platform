@@ -29,6 +29,41 @@ export const HeaderElementsContainer = styled.div`
   display: flex;
   align-items: center;
   color: ${black};
+
+  ${props =>
+    props.isLogged &&
+    css`
+      justify-content: space-between;
+    `}
+`;
+
+export const HeaderLoggedContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  .header-logged-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logged-welcome-user {
+    padding-left: ${padding}px;
+    font-size: ${fontSize}rem;
+
+    .logged-user-name {
+      font-weight: bold;
+    }
+  }
+
+  .header-logged-clicked-elements {
+    margin: 0 ${margin}px;
+  }
+
+  .logout-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 `;
 
 export const NameContainer = styled.h1`
@@ -59,6 +94,16 @@ export const MenuContainer = styled.nav`
     width: 40%;
     margin-left: auto;
   }
+
+  ${props =>
+    props.isLogged &&
+    css`
+      @media ${mobileLarge} {
+        height: 0;
+        width: auto;
+        margin-left: 0;
+      }
+    `}
 `;
 
 export const FooterContainer = styled.footer`

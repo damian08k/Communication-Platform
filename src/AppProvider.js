@@ -6,6 +6,9 @@ export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(FIRST_WINDOW_WIDTH);
+  const [isLogged, setIsLogged] = useState(true);
+  const [userName, setUserName] = useState('uzytkownik');
+  const [userType, setUserType] = useState('');
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -17,7 +20,9 @@ const AppProvider = ({ children }) => {
     return () => window.removeEventListener('resize', handleWindowResize);
   }, [windowWidth]);
 
-  return <AppContext.Provider value={{ windowWidth }}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ windowWidth, isLogged, setIsLogged, userName, setUserName, userType, setUserType }}>{children}</AppContext.Provider>
+  );
 };
 
 export default AppProvider;

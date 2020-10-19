@@ -55,9 +55,6 @@ export const List = styled.ul`
       border-bottom: none;
       padding: 0 10px;
 
-      &:hover {
-      }
-
       &::after {
         content: '';
         display: block;
@@ -73,6 +70,68 @@ export const List = styled.ul`
       }
     }
   }
+
+  ${props =>
+    props.logged &&
+    css`
+      transform: ${({ clicked }) => (clicked ? 'scaleY(1)' : 'scaleY(0)')};
+      transform-origin: 50% 0;
+      transition-duration: 0.3s;
+      list-style-type: none;
+
+      .list-element-container {
+        width: 100%;
+
+        &:first-child {
+          border-top: 2px solid ${black};
+        }
+      }
+
+      .list-element {
+        display: block;
+        width: 100%;
+        padding: ${padding * 2}px;
+        font-size: ${fontSize}rem;
+        border-bottom: 2px solid ${black};
+        background-color: white;
+        color: ${black};
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      @media ${mobileLarge} {
+        display: block;
+        transform: ${({ clicked }) => (clicked ? 'scaleY(1)' : 'scaleY(0)')};
+        transform-origin: 50% 0;
+        transition-duration: 0.3s;
+
+        .list-element-container {
+          width: 100%;
+
+          &:first-child {
+            border-top: 2px solid ${black};
+          }
+        }
+
+        .list-element {
+          display: block;
+          width: 100%;
+          padding: ${padding * 2}px;
+          font-size: ${fontSize}rem;
+          border-bottom: 2px solid ${black};
+          background-color: white;
+          color: ${black};
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    `}
 `;
 
 export const Hamburger = styled.button`
@@ -103,18 +162,6 @@ export const Hamburger = styled.button`
     transition: 0.2s transform linear;
   }
 
-  ${props =>
-    props.isClicked &&
-    css`
-        border-top: none;
-        transform: rotate(45deg);
-
-        &::after {
-          transform: rotate(90deg) translateX(10px);
-        }
-      }
-    `};
-
   .hamburger-info {
     border: 0;
     clip: rect(0 0 0 0);
@@ -130,4 +177,26 @@ export const Hamburger = styled.button`
   @media ${mobileLarge} {
     display: none;
   }
+
+  ${props =>
+    props.isClicked &&
+    css`
+        border-top: none;
+        transform: rotate(45deg);
+
+        &::after {
+          transform: rotate(90deg) translateX(10px);
+        }
+      }
+    `};
+
+  ${props =>
+    props.isLogged &&
+    css`
+      margin: ${margin}px 0 ${margin}px ${margin * 2}px;
+
+      @media ${mobileLarge} {
+        display: block;
+      }
+    `}
 `;
