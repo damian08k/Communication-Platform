@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 
 import { AppContext } from '../AppProvider';
 
@@ -43,12 +43,12 @@ const Help = () => {
   const tableOrList = windowWidth > changeWidth ? showDesktopHelpTable : showMobileHelpList;
 
   return (
-    <ContentContainer>
-      <HelpSection>
-        <SectionTitle>Pomoc dotycząca użytkowania platformy</SectionTitle>
-        {tableOrList}
-      </HelpSection>
-    </ContentContainer>
+    <Fragment>
+      <SectionTitle>Pomoc dotycząca użytkowania platformy</SectionTitle>
+      <ContentContainer>
+        <HelpSection>{tableOrList}</HelpSection>
+      </ContentContainer>
+    </Fragment>
   );
 };
 
