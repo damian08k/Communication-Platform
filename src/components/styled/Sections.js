@@ -28,6 +28,13 @@ export const InfoText = styled.p`
     css`
       font-weight: bold;
     `}
+
+  ${props =>
+    props.noPrivileges &&
+    css`
+      font-weight: bold;
+      color: #fc0303;
+    `}
 `;
 
 export const WelcomeSection = styled.section`
@@ -525,5 +532,171 @@ export const RegisterSection = styled.section`
     .register-button {
       margin-top: ${margin + 5}px;
     }
+  }
+`;
+
+export const MessagesSection = styled.section.attrs(props => ({
+  isShowMessage: props.isShowMessage,
+}))`
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  min-height: 250px;
+  border: 2px solid black;
+
+  .messages-left-panel {
+    display: ${({ isShowMessage }) => (isShowMessage ? 'none' : 'block')};
+
+    .user-last-messages {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: ${padding / 2}px ${padding}px;
+      border-bottom: 2px solid black;
+      cursor: pointer;
+
+      .user-message-info {
+        flex-basis: 75%;
+        text-align: center;
+
+        .user-message-last-message {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .messages-right-panel {
+    display: ${({ isShowMessage }) => (isShowMessage ? 'block' : 'none')};
+        
+    .message {
+      display: flex;
+      justify-content: space-between;
+
+      &:nth-child(2n) {
+        .message-left-panel {
+          order: 2;
+        }
+
+        .message-right-panel {
+          order: 1;
+        }
+      }
+
+      .message-left-panel {
+        display: none;
+        margin: ${margin}px;
+        width: 20%;
+        text-align: center;
+      }
+
+      .message-right-panel {
+        margin: ${margin}px;
+        padding: ${padding / 2}px;
+        border: 1px solid black;
+
+        .user-message {
+          font-size: ${fontSize}rem;
+        }
+
+        .message-author {
+          padding-top: ${padding}px;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .user-message-user-name {
+    padding-bottom: ${padding / 1.5}px;
+    font-size: ${fontSize}rem;
+    font-weight: bold;
+  }
+
+  .panel-title-ico {
+    width: 50px;
+    height: 50px;
+  }
+
+  .panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    border-bottom: 2px solid black;
+
+    .panel-title-ico,
+    .panel-title-user-name {
+      display: none;
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      padding: ${padding / 2}px;
+
+      .close-message {
+        width: 25px;
+        line-height: 25px;
+        border: 2px solid black;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media ${mobileXMedium} {
+    flex-direction: row;
+    border-width: 1px;
+
+    .messages-left-panel {
+      display: block;
+      border: 1px solid black;
+
+    }
+
+    .messages-right-panel {
+      display: block;
+      border: 1px solid black;
+
+      .message {
+        .message-left-panel {
+          display: block;
+        }
+
+        .message-right-panel {
+          width: 400px;
+        }
+      }
+    }
+
+    .message-author {
+      display: none;
+    }
+
+    .panel-heading {
+      height: 60px;
+
+      .panel-title {
+        flex-grow: 1;
+        justify-content: center;
+
+        .panel-title-ico,
+        .panel-title-user-name {
+          display: block;
+        }
+
+        .panel-title-ico {
+          margin: 0 ${margin}px 0 20%;
+        }
+
+        .close-message {
+          display: none;
+        }
+      }
   }
 `;

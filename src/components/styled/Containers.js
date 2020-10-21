@@ -211,6 +211,12 @@ export const ContentContainer = styled.div`
         }
       }
     `}
+
+    ${props =>
+    props.noPrivileges &&
+    css`
+      align-self: center;
+    `}
 `;
 
 export const FlexContainer = styled.div`

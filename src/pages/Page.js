@@ -9,6 +9,7 @@ import FacultyNews from './FacultyNews';
 import Help from './Help';
 import Login from './Login';
 import Main from './Main';
+import Messages from './Messages';
 import Plans from './Plans';
 import Practices from './Practices';
 import Register from './Register';
@@ -19,6 +20,7 @@ const Page = () => {
       <Route exact path="/" component={Main} />
       <Route path="/zaloguj" component={Login} />
       <Route path="/zarejestruj" component={Register} />
+      <Route path="/wiadomosci" component={Messages} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />
