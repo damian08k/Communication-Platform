@@ -700,3 +700,95 @@ export const MessagesSection = styled.section.attrs(props => ({
       }
   }
 `;
+
+export const SettingsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+
+  .settings-panel-heading {
+    font-size: ${h3}rem;
+    text-align: center;
+  }
+
+  .settings-input-label {
+    margin: ${margin}px 0;
+    width: 100%;
+    font-size: ${fontSize}rem;
+  }
+
+  .settings-input {
+    margin: ${margin}px 0 0;
+    padding: ${padding / 2}px ${padding}px;
+    width: 100%;
+    border-radius: 20px;
+    order: 2;
+
+    &::placeholder {
+      font-family: 'Lato';
+    }
+  }
+
+  .settings-change-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .input-change-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: ${margin}px 0;
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+
+  .settings-right-panel {
+    margin-top: ${margin * 2}px;
+
+    .input-change-container {
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+      .settings-input-label {
+        width: 70%;
+      }
+      .settings-input {
+        margin-bottom: ${margin}px;
+        width: 10%;
+        order: -1;
+      }
+    }
+  }
+
+  @media ${mobileXMedium} {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 750px;
+
+    .settings-left-panel {
+      flex-basis: 50%;
+
+      .settings-input-label {
+        margin-bottom: 0;
+      }
+    }
+
+    .settings-right-panel {
+      margin-top: 0;
+      flex-basis: 50%;
+
+      .settings-panel-heading {
+        padding-left: ${padding * 1.5}px;
+      }
+
+      .input-change-container {
+        .settings-input-label {
+          width: auto;
+        }
+      }
+    }
+  }
+`;

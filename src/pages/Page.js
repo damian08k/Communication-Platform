@@ -13,6 +13,7 @@ import Messages from './Messages';
 import Plans from './Plans';
 import Practices from './Practices';
 import Register from './Register';
+import Settings from './Settings';
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
       <Route path="/zaloguj" component={Login} />
       <Route path="/zarejestruj" component={Register} />
       <Route path="/wiadomosci" component={Messages} />
+      <Route path="/ustawienia" component={Settings} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />
