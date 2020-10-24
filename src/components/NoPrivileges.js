@@ -6,7 +6,7 @@ import { InfoText } from './styled/Sections';
 const NoPrivileges = () => {
   return (
     <ContentContainer noPrivileges>
-      <InfoText noPrivileges>Nie posiadasz uprawnień do przeglądania zawartości tej strony! By móc ją przeglądać musisz się zalogować!</InfoText>
+      <InfoText noPrivileges>Nie posiadasz uprawnień do przeglądania zawartości tej strony!</InfoText>
     </ContentContainer>
   );
 };
