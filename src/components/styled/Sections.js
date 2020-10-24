@@ -826,3 +826,74 @@ export const MyCoursesSection = styled.section`
     }
   }
 `;
+
+export const AddMaterialsSection = styled.section`
+  .add-materials-content-container {
+    &:nth-child(2) {
+      margin-top: ${margin * 2}px;
+    }
+
+    .add-materials-heading {
+      font-size: ${h3}rem;
+      text-align: center;
+    }
+
+    .courses-list {
+      margin-top: ${margin}px;
+      padding: ${padding / 2}px;
+      font-family: 'Lato';
+      border-width: 2px;
+      border-radius: 20px;
+    }
+
+    .added-materials {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: ${margin}px;
+      border: 2px solid black;
+      border-radius: 20px;
+
+      .material {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: ${padding}px;
+        flex-basis: 100%;
+
+        .added-material-icon {
+          width: 30px;
+          height: 30px;
+        }
+
+        .material-name,
+        .material-name-add-material {
+          margin-right: auto;
+          padding-left: ${padding}px;
+          font-size: 1.5rem;
+        }
+
+        .remove-material-button,
+        .add-material-button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+        }
+
+        .add-material-button {
+          display: flex;
+          align-items: center;
+        }
+
+        .material-name-add-material {
+          font-weight: bold;
+        }
+      }
+    }
+
+    @media ${mobileSmall} {
+      .add-materials-heading {
+        text-align: left;
+      }
+    }
+  }
+`;

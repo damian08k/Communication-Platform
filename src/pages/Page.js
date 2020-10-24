@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import AddMaterials from './AddMaterials';
 import Authorities from './Authorities';
 import UserCalendar from './UserCalendar';
 import Courses from './Courses';
@@ -27,6 +28,7 @@ const Page = () => {
       <Route path="/ustawienia" component={Settings} />
       <Route path="/moje-przedmioty" component={MyCourses} />
       <Route path="/kalendarz" component={UserCalendar} />
+      <Route path="/dodaj-materialy" component={AddMaterials} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />
