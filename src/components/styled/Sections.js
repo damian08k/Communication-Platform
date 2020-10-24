@@ -792,3 +792,37 @@ export const SettingsSection = styled.section`
     }
   }
 `;
+
+export const MyCoursesSection = styled.section`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .my-courses-course-container {
+    margin: ${margin}px;
+
+    .my-course-single-course {
+      display: block;
+      width: 200px;
+      line-height: 200px;
+      font-size: ${fontSize}rem;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: #c4c4c4;
+      color: ${black};
+    }
+  }
+
+  @media ${mobileLarge} {
+    .my-courses-course-container {
+      margin: ${margin * 2}px 0;
+      flex-basis: 33%;
+
+      .my-course-single-course {
+        margin: 0 auto;
+      }
+    }
+  }
+`;
