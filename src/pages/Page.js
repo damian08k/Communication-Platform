@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Authorities from './Authorities';
+import UserCalendar from './UserCalendar';
 import Courses from './Courses';
 import Deanery from './Deanery';
 import Faculty from './Faculty';
@@ -25,6 +26,7 @@ const Page = () => {
       <Route path="/wiadomosci" component={Messages} />
       <Route path="/ustawienia" component={Settings} />
       <Route path="/moje-przedmioty" component={MyCourses} />
+      <Route path="/kalendarz" component={UserCalendar} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />

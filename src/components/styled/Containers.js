@@ -6,7 +6,7 @@ const {
   fontSize,
   margin,
   padding,
-  breakpoints: { mobileXMedium, mobileLarge },
+  breakpoints: { mobileSmall, mobileXMedium, mobileLarge },
   colors: { black, white },
   headings: { h1, h2, h3 },
 } = defaultStylesValues;
@@ -216,6 +216,18 @@ export const ContentContainer = styled.div`
     props.noPrivileges &&
     css`
       align-self: center;
+    `}
+
+    ${props =>
+    props.calendar &&
+    css`
+      .react-calendar {
+        width: auto;
+
+        @media ${mobileSmall} {
+          width: 350px;
+        }
+      }
     `}
 `;
 
