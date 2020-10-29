@@ -13,6 +13,7 @@ import Login from './Login';
 import Main from './Main';
 import Messages from './Messages';
 import MyCourses from './MyCourses';
+import MyPosts from './MyPosts';
 import Plans from './Plans';
 import Practices from './Practices';
 import Register from './Register';
@@ -29,6 +30,7 @@ const Page = () => {
       <Route path="/moje-przedmioty" component={MyCourses} />
       <Route path="/kalendarz" component={UserCalendar} />
       <Route path="/dodaj-materialy" component={AddMaterials} />
+      <Route path="/moje-wpisy" component={MyPosts} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />
