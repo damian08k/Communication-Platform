@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import AddMaterials from './AddMaterials';
+import AddPost from './AddPost';
 import Authorities from './Authorities';
 import UserCalendar from './UserCalendar';
 import Courses from './Courses';
@@ -31,6 +32,7 @@ const Page = () => {
       <Route path="/kalendarz" component={UserCalendar} />
       <Route path="/dodaj-materialy" component={AddMaterials} />
       <Route path="/moje-wpisy" component={MyPosts} />
+      <Route path="/dodaj-wpis" component={AddPost} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />

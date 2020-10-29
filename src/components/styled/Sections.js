@@ -1032,3 +1032,83 @@ export const MyPostsSection = styled.section`
     }
   }
 `;
+
+export const AddPostSection = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .categories-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+
+    .categories-heading {
+      flex-basis: 100%;
+      font-size: ${h3}rem;
+      text-align: center;
+    }
+
+    .categories-list {
+      margin: ${margin}px 0;
+      padding: ${padding / 2}px;
+      font-family: 'Lato';
+      border-width: 2px;
+      border-radius: 20px;
+    }
+  }
+
+  .post-title-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+
+    .add-post-title {
+      flex-basis: 100%;
+      font-size: ${h3}rem;
+      text-align: center;
+    }
+
+    .add-post-title-area {
+      margin: ${margin}px 0;
+      padding: ${padding / 2}px;
+      flex-basis: 50%;
+
+      &::placeholder {
+        font-family: 'Lato';
+      }
+    }
+  }
+
+  .editor {
+    flex-basis: 100%;
+    border: 2px solid black;
+
+    ._18REez13sPdqyVdjc8KyiG {
+      font-size: 1.5rem;
+      border-bottom: 2px solid black;
+    }
+
+    .ProseMirror {
+      font-size: ${fontSize}rem;
+    }
+  }
+
+  @media ${mobileSmall} {
+    justify-content: flex-start;
+
+    .categories-content-container {
+      justify-content: flex-start;
+      .categories-heading {
+        text-align: left;
+      }
+    }
+
+    .post-title-container {
+      .add-post-title {
+        text-align: left;
+      }
+    }
+  }
+`;
