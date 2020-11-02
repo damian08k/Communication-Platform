@@ -1112,3 +1112,60 @@ export const AddPostSection = styled.section`
     }
   }
 `;
+
+export const MainForumSection = styled.section`
+  margin: ${margin * 2}px;
+  padding: ${padding}px 0;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #e0e7f1;
+
+  .forum-panel-container {
+    .forum-panel-title {
+      padding-bottom: ${padding}px;
+      border-bottom: 2px solid black;
+
+      .panel-title {
+        font-size: ${fontSize}rem;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    .forum-panel-threads {
+      padding: 0 ${padding}px;
+
+      .single-thread-container {
+        display: flex;
+        align-items: center;
+        margin: ${margin}px 0;
+        font-size: ${fontSize}rem;
+        font-weight: bold;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .thread-icon {
+          width: 30px;
+          height: 30px;
+        }
+
+        .panel-thread-link {
+          padding-left: ${padding}px;
+          text-decoration: none;
+          color: ${black};
+          cursor: pointer;
+        }
+
+        .panel-single-thread {
+          padding-left: ${padding}px;
+        }
+      }
+    }
+  }
+
+  @media ${mobileLarge} {
+    min-width: 900px;
+  }
+`;

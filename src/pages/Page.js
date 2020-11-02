@@ -9,6 +9,7 @@ import Courses from './Courses';
 import Deanery from './Deanery';
 import Faculty from './Faculty';
 import FacultyNews from './FacultyNews';
+import Forum from './Forum';
 import Help from './Help';
 import Login from './Login';
 import Main from './Main';
@@ -33,6 +34,7 @@ const Page = () => {
       <Route path="/dodaj-materialy" component={AddMaterials} />
       <Route path="/moje-wpisy" component={MyPosts} />
       <Route path="/dodaj-wpis" component={AddPost} />
+      <Route path="/forum" component={Forum} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />
       <Route path="/wladze" component={Authorities} />
