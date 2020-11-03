@@ -6,7 +6,7 @@ const {
   fontSize,
   margin,
   padding,
-  breakpoints: { mobileSmall, mobileXMedium, mobileLarge },
+  breakpoints: { mobileSmall, mobileMedium, mobileXMedium, mobileLarge },
   colors: { black, white },
   headings: { h2, h3 },
 } = defaultStylesValues;
@@ -1130,6 +1130,27 @@ export const MainForumSection = styled.section`
         font-weight: bold;
         text-align: center;
       }
+
+      .add-topic-button {
+        display: block;
+        width: fit-content;
+        margin: ${margin * 2}px auto 0;
+        padding: ${padding}px ${padding * 2}px;
+        border: 2px solid ${black};
+        border-radius: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: ${black};
+        transition: 0.3s background-color linear, 0.3s color linear;
+        cursor: pointer;
+
+        &:hover {
+          background-color: ${black};
+          color: ${white};
+        }
+      }
     }
 
     .forum-panel-threads {
@@ -1168,4 +1189,27 @@ export const MainForumSection = styled.section`
   @media ${mobileLarge} {
     min-width: 900px;
   }
+
+  ${props =>
+    props.categories &&
+    css`
+  @media ${mobileMedium} {
+    .forum-panel-container {
+      .forum-panel-title {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        
+        .panel-title {
+          padding-left: ${padding}px;
+          flex-basis: calc(100% - 150px);
+          text-align: left;
+        }
+
+        .add-topic-button {
+          margin: 0 ${margin / 2}px;
+        }
+      }
+  }
+  `}
 `;

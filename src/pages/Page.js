@@ -10,6 +10,7 @@ import Deanery from './Deanery';
 import Faculty from './Faculty';
 import FacultyNews from './FacultyNews';
 import Forum from './Forum';
+import ForumCategoryThreads from './ForumCategoryThreads';
 import Help from './Help';
 import Login from './Login';
 import Main from './Main';
@@ -34,6 +35,7 @@ const Page = () => {
       <Route path="/dodaj-materialy" component={AddMaterials} />
       <Route path="/moje-wpisy" component={MyPosts} />
       <Route path="/dodaj-wpis" component={AddPost} />
+      <Route path="/forum/:category" component={ForumCategoryThreads} />
       <Route path="/forum" component={Forum} />
       <Route path="/wydzial" component={Faculty} />
       <Route path="/aktualnosci" component={FacultyNews} />

@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 import threadIco from '../../../assets/images/thread-ico.svg';
 
+const categoryPath = '/forum/:category';
+
 const SingleThread = ({ thread, id, index }) => {
+  const { path } = useRouteMatch();
+  const topicSubpage = path === categoryPath ? `temat-${id}` : '';
+
   const isLink =
     id === '1' && index === 0 ? (
-      <Link to={`/forum/temat-${id}`} className="panel-thread-link">
+      <Link to={`/forum/kategoria-${id}/${topicSubpage}`} className="panel-thread-link">
         {thread}
       </Link>
     ) : (
