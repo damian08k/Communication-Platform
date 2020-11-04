@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import AddMaterials from './AddMaterials';
 import AddPost from './AddPost';
+import AddTopic from './AddTopic';
 import Authorities from './Authorities';
 import UserCalendar from './UserCalendar';
 import Courses from './Courses';
@@ -35,6 +36,7 @@ const Page = () => {
       <Route path="/dodaj-materialy" component={AddMaterials} />
       <Route path="/moje-wpisy" component={MyPosts} />
       <Route path="/dodaj-wpis" component={AddPost} />
+      <Route path="/forum/:category/dodaj-temat" component={AddTopic} />
       <Route path="/forum/:category" component={ForumCategoryThreads} />
       <Route path="/forum" component={Forum} />
       <Route path="/wydzial" component={Faculty} />

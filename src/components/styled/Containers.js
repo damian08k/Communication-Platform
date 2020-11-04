@@ -229,6 +229,12 @@ export const ContentContainer = styled.div`
         }
       }
     `}
+
+    ${props =>
+    props.topic &&
+    css`
+      width: 100%;
+    `}
 `;
 
 export const FlexContainer = styled.div`

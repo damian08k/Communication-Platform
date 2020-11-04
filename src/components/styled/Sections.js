@@ -6,7 +6,7 @@ const {
   fontSize,
   margin,
   padding,
-  breakpoints: { mobileSmall, mobileMedium, mobileXMedium, mobileLarge },
+  breakpoints: { mobileSmall, mobileMedium, mobileXMedium, mobileLarge, desktopSmall },
   colors: { black, white },
   headings: { h2, h3 },
 } = defaultStylesValues;
@@ -1212,4 +1212,153 @@ export const MainForumSection = styled.section`
       }
   }
   `}
+`;
+
+export const AddTopicSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .topic-heading {
+    font-size: ${h3}rem;
+    text-align: center;
+  }
+
+  .topic-category {
+    margin: 0 0 ${margin}px;
+    width: 100%;
+
+    .topic-category-name {
+      margin-top: ${margin / 2}px;
+      font-size: ${fontSize}rem;
+      text-align: center;
+    }
+  }
+
+  .topic-title {
+    width: 100%;
+
+    .topic-title-input {
+      margin-top: ${margin}px;
+      padding: ${padding / 2}px ${padding}px;
+      width: 100%;
+      border: 2px solid ${black};
+      border-radius: 20px;
+
+      &::placeholder {
+        font-family: 'Lato';
+      }
+    }
+  }
+
+  .topic-main-container {
+    margin: ${margin}px 0;
+    width: 100%;
+
+    .editor {
+      flex-basis: 100%;
+      border: 2px solid black;
+
+      ._18REez13sPdqyVdjc8KyiG {
+        display: block;
+        font-size: 1.5rem;
+        border-bottom: 2px solid black;
+      }
+
+      .ProseMirror {
+        font-size: ${fontSize}rem;
+      }
+    }
+
+    .topic-attachements {
+      margin: ${margin}px auto 0;
+      max-width: 300px;
+      border: 2px solid black;
+
+      .topic-heading {
+        margin: ${margin}px 0;
+      }
+
+      .attachements-container {
+        margin: ${margin}px;
+
+        .single-attachement {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: ${margin}px 0;
+
+          .remove-attachement {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+          }
+
+          .topic-ico {
+            width: 30px;
+            height: 30px;
+          }
+
+          .attachement-name {
+            font-size: ${fontSize}rem;
+          }
+        }
+      }
+    }
+  }
+
+  .topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media ${mobileXMedium} {
+    .topic-category {
+      .topic-heading,
+      .topic-category-name {
+        text-align: left;
+      }
+    }
+
+    .topic-title {
+      .topic-heading {
+        text-align: left;
+      }
+
+      .topic-title-input {
+        width: 350px;
+      }
+    }
+
+    .topic-buttons {
+      width: 100%;
+      justify-content: flex-start;
+
+      .topic-button:last-child {
+        margin-left: ${margin}px;
+      }
+    }
+  }
+
+  @media ${mobileLarge} {
+    .topic-main-container {
+      display: flex;
+      justify-content: space-between;
+
+      .editor {
+        flex-basis: auto;
+      }
+
+      .topic-attachements {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media ${desktopSmall} {
+    .topic-attachements {
+      width: 500px;
+    }
+  }
 `;
