@@ -6,8 +6,8 @@ export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(FIRST_WINDOW_WIDTH);
-  const [isLogged, setIsLogged] = useState(true);
-  const [userName, setUserName] = useState('uzytkownik');
+  const [isLogged, setIsLogged] = useState(false);
+  const [userName, setUserName] = useState('');
   const [userType, setUserType] = useState('');
 
   useEffect(() => {

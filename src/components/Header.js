@@ -20,9 +20,14 @@ const CHANGE_ELEMENTS_WIDTH = 1024;
 
 const Header = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const { windowWidth, isLogged, userName, userType } = useContext(AppContext);
+  const { windowWidth, isLogged, setIsLogged, userName, setUserName, userType, setUserType } = useContext(AppContext);
 
   const handleShowMenu = () => setIsClicked(prevValue => !prevValue);
+  const handleLogoutOption = () => {
+    setIsLogged(prevValue => !prevValue);
+    setUserName('');
+    setUserType('');
+  };
 
   const webTitle = <span className="name-container-heading">{PLATFORM_TITLE}</span>;
   const headerLogo = (
@@ -83,9 +88,9 @@ const Header = () => {
           <NavLink to="/" className="header-logged-clicked-elements">
             <img src={bellIco} alt="Ikona powiadomień" className="header-logged-img" />
           </NavLink>
-          <button className="header-logged-clicked-elements logout-button">
+          <NavLink to="/" className="header-logged-clicked-elements logout-button" onClick={handleLogoutOption}>
             <img src={logoutIco} alt="Ikona wylogowania się" className="header-logged-img" />
-          </button>
+          </NavLink>
         </HeaderLoggedContainer>
       </HeaderElementsContainer>
       {mobileMenu}
