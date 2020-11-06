@@ -1183,6 +1183,42 @@ export const MainForumSection = styled.section`
           padding-left: ${padding}px;
         }
       }
+
+      .topic-inside {
+        margin-top: ${margin}px;
+
+        .topic-inside-list {
+          padding: ${padding}px 0 ${padding}px ${padding * 1.5}px;
+        }
+
+        .topic-inside-text,
+        .topic-inside-list {
+          font-size: 1.5rem;
+        }
+      }
+
+      .topic-lower-panel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: ${margin}px;
+
+        .topic-author {
+          display: flex;
+          align-items: center;
+
+          .author-img {
+            width: 30px;
+            height: 30px;
+          }
+
+          .author-name {
+            padding-left: ${padding / 2}px;
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 

@@ -13,6 +13,7 @@ import FacultyNews from './FacultyNews';
 import Forum from './Forum';
 import ForumCategoryThreads from './ForumCategoryThreads';
 import Help from './Help';
+import InsideTopic from './InsideTopic';
 import Login from './Login';
 import Main from './Main';
 import Messages from './Messages';
@@ -37,6 +38,7 @@ const Page = () => {
       <Route path="/moje-wpisy" component={MyPosts} />
       <Route path="/dodaj-wpis" component={AddPost} />
       <Route path="/forum/:category/dodaj-temat" component={AddTopic} />
+      <Route path="/forum/:category/:topic" component={InsideTopic} />
       <Route path="/forum/:category" component={ForumCategoryThreads} />
       <Route path="/forum" component={Forum} />
       <Route path="/wydzial" component={Faculty} />
