@@ -5,7 +5,6 @@ import { List } from './styled/MenuElements';
 import { admWorkerType, lecturerType, studentType } from '../js/constants';
 
 const Menu = ({ isClicked, isLogged, userType }) => {
-  // wyrzucić to stąd bo zaśmieca
   const showUsersMenuOption = () => {
     if (isLogged) {
       if (userType === admWorkerType) {

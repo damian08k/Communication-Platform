@@ -5,8 +5,6 @@ import { ContentContainer } from '../../styled/Containers';
 import dok08 from '../../../assets/files/dok08_praktyki.pdf';
 import for18 from '../../../assets/files/for18-Cele i program praktyki.docx';
 
-// There is just a part of documents.
-
 const documents = [
   {
     id: '1',

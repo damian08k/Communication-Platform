@@ -2,8 +2,6 @@ import React from 'react';
 
 import { ContentContainer } from '../../styled/Containers';
 
-// There is just a part of offers
-
 const offers = [
   {
     id: '1',

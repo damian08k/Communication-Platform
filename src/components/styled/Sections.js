@@ -1126,6 +1126,7 @@ export const MainForumSection = styled.section`
       border-bottom: 2px solid black;
 
       .panel-title {
+        padding: 0 ${padding}px;
         font-size: ${fontSize}rem;
         font-weight: bold;
         text-align: center;

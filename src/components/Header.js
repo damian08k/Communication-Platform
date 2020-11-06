@@ -61,7 +61,7 @@ const Header = () => {
   const showUserName =
     windowWidth > CHANGE_ELEMENTS_WIDTH ? (
       <HeaderLoggedContainer>
-        <img src={avatarIco} alt="Ikona użytkownika" className="header-logged-img" />
+        <img src={avatarIco} alt="Ikona użytkownika" className="header-logged-img" style={{ marginLeft: '130px' }} />
         <p className="logged-welcome-user">
           Witaj <span className="logged-user-name">{userName}</span>
         </p>
