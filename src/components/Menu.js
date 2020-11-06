@@ -58,13 +58,15 @@ const Menu = ({ isClicked, isLogged, userType }) => {
   };
 
   const showUsersCommonOption = () => {
-    return (
-      <li className="list-element-container">
-        <NavLink to="/forum" className="list-element">
-          Forum
-        </NavLink>
-      </li>
-    );
+    if (isLogged) {
+      return (
+        <li className="list-element-container">
+          <NavLink to="/forum" className="list-element">
+            Forum
+          </NavLink>
+        </li>
+      );
+    }
   };
 
   return (

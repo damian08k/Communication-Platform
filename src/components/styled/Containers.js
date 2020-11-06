@@ -219,6 +219,18 @@ export const ContentContainer = styled.div`
     `}
 
     ${props =>
+    props.error &&
+    css`
+      align-self: center;
+
+      .error {
+        font-size: ${fontSize}rem;
+        font-weight: bold;
+        color: red;
+      }
+    `}
+    
+    ${props =>
     props.calendar &&
     css`
       .react-calendar {

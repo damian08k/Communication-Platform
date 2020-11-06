@@ -5,6 +5,7 @@ import AddMaterials from './AddMaterials';
 import AddPost from './AddPost';
 import AddTopic from './AddTopic';
 import Authorities from './Authorities';
+import Error404 from './Error404';
 import UserCalendar from './UserCalendar';
 import Courses from './Courses';
 import Deanery from './Deanery';
@@ -50,6 +51,7 @@ const Page = () => {
       <Route path="/kursy" component={Courses} />
       <Route path="/faq" component={Help} />
       <Route path="/pomoc" component={Help} />
+      <Route path="*" component={Error404} />
     </Switch>
   );
 };
