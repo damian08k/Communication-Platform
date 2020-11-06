@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Communication-platform/static/css/main.98fc2fda.chunk.css",
-    "main.js": "/Communication-platform/static/js/main.2e14ea3f.chunk.js",
-    "main.js.map": "/Communication-platform/static/js/main.2e14ea3f.chunk.js.map",
+    "main.js": "/Communication-platform/static/js/main.b147820f.chunk.js",
+    "main.js.map": "/Communication-platform/static/js/main.b147820f.chunk.js.map",
     "runtime-main.js": "/Communication-platform/static/js/runtime-main.95f3d2c5.js",
     "runtime-main.js.map": "/Communication-platform/static/js/runtime-main.95f3d2c5.js.map",
     "static/css/2.8dbe6964.chunk.css": "/Communication-platform/static/css/2.8dbe6964.chunk.css",
-    "static/js/2.6deb2ea2.chunk.js": "/Communication-platform/static/js/2.6deb2ea2.chunk.js",
-    "static/js/2.6deb2ea2.chunk.js.map": "/Communication-platform/static/js/2.6deb2ea2.chunk.js.map",
+    "static/js/2.3fa33b96.chunk.js": "/Communication-platform/static/js/2.3fa33b96.chunk.js",
+    "static/js/2.3fa33b96.chunk.js.map": "/Communication-platform/static/js/2.3fa33b96.chunk.js.map",
     "index.html": "/Communication-platform/index.html",
-    "precache-manifest.dafdc3110981fdf91c8ca3405aa63375.js": "/Communication-platform/precache-manifest.dafdc3110981fdf91c8ca3405aa63375.js",
+    "precache-manifest.056decf6b6cc8e0c9925f95423750e6c.js": "/Communication-platform/precache-manifest.056decf6b6cc8e0c9925f95423750e6c.js",
     "service-worker.js": "/Communication-platform/service-worker.js",
     "static/css/2.8dbe6964.chunk.css.map": "/Communication-platform/static/css/2.8dbe6964.chunk.css.map",
     "static/css/main.98fc2fda.chunk.css.map": "/Communication-platform/static/css/main.98fc2fda.chunk.css.map",
-    "static/js/2.6deb2ea2.chunk.js.LICENSE.txt": "/Communication-platform/static/js/2.6deb2ea2.chunk.js.LICENSE.txt",
+    "static/js/2.3fa33b96.chunk.js.LICENSE.txt": "/Communication-platform/static/js/2.3fa33b96.chunk.js.LICENSE.txt",
     "static/media/basic.css": "/Communication-platform/static/media/Lato-Regular.2d36b1a9.ttf",
     "static/media/WZ-logo.png": "/Communication-platform/static/media/WZ-logo.47d0ae96.png",
     "static/media/add-ico.svg": "/Communication-platform/static/media/add-ico.09455140.svg",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.95f3d2c5.js",
     "static/css/2.8dbe6964.chunk.css",
-    "static/js/2.6deb2ea2.chunk.js",
+    "static/js/2.3fa33b96.chunk.js",
     "static/css/main.98fc2fda.chunk.css",
-    "static/js/main.2e14ea3f.chunk.js"
+    "static/js/main.b147820f.chunk.js"
   ]
 }
