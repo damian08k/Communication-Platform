@@ -26,3 +26,7 @@ System logowania został znacznie uproszczony. Na potrzeby aplikacji zalogować 
 ## Status aplikacji
 
 Na ten moment (06.11.2020) przyjmuje się, iż prototyp platformy jest **zakończony**.
+
+## Link
+
+Aplikacja jest dostępna pod linkiem: https://damian08k.github.io/Communication-platform/

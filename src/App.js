@@ -12,7 +12,7 @@ import './css/basic.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <AppProvider>
         <MainContainer>
           <Header />
